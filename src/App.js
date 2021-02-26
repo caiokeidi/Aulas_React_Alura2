@@ -13,11 +13,15 @@ class App extends Component {
           Formulário de Cadastro
         </Typography>
         
-        <FormularioCadastro/>
+        <FormularioCadastro aoEnviar={aoEnviarForm}/>
       </Container>
     );
   }
   
+}
+
+function aoEnviarForm(dados){
+  console.log(dados)
 }
 
 export default App;
