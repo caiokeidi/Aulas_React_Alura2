@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Button, TextField, Switch, FormControlLabel} from '@material-ui/core'
 
 
-function FormularioCadastro({aoEnviar}){ //Pegando a propriedade enviada.
+function FormularioCadastro({aoEnviar, validarCPF}){ //Pegando a propriedade enviada.
     const [nome, setNome] = useState('');
     const [sobrenome, SetSobrenome] = useState('');
     const [cpf, setCpf] = useState('');
@@ -45,8 +45,10 @@ function FormularioCadastro({aoEnviar}){ //Pegando a propriedade enviada.
                 }}
 
                 onBlur = {event => {
-                    setErros({cpf:{valido: false, texto: 'CPF deve ter 11 dígitos'}})
+                    const ehvalido = validarCPF(cpf); //Peguei do estado, mas pode ser event.target.value
+                    setErros({cpf:ehvalido})
                 }}
+                 
                 error={!erros.cpf.valido}
                 helperText={erros.cpf.texto}
                 id='CPF' 
