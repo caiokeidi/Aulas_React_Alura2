@@ -22,6 +22,7 @@ function DadosEntrega({ aoEnviar }) {
         }}
         id="cep"
         label="CEP"
+        name='cep'
         type="number"
         variant="outlined"
         margin="normal"
@@ -34,6 +35,7 @@ function DadosEntrega({ aoEnviar }) {
           setEndereco(event.target.value);
         }}
         id="endereco"
+        name='endereco'
         label="Endereço"
         type="text"
         variant="outlined"
@@ -48,6 +50,7 @@ function DadosEntrega({ aoEnviar }) {
         }}
         id="numero"
         label="Número"
+        name='numero'
         type="number"
         variant="outlined"
         margin="normal"
@@ -60,6 +63,7 @@ function DadosEntrega({ aoEnviar }) {
           setEstado(event.target.value);
         }}
         id="estado"
+        name='estado'
         label="Estado"
         type="text"
         variant="outlined"
@@ -73,6 +77,7 @@ function DadosEntrega({ aoEnviar }) {
         }}
         id="cidade"
         label="Cidade"
+        name='cidade'
         type="text"
         variant="outlined"
         margin="normal"
